@@ -1,0 +1,50 @@
+map:
+  center_lat: 25.7617
+  center_lon: -80.1918
+  default_zoom: 12
+  bounding_box:
+    lat_min: 25.70
+    lon_min: -80.28
+    lat_max: 25.82
+    lon_max: -80.12
+
+grid:
+  default_size_meters: 1000.0  # Size of each square grid cell in meters
+  srid: 3857                  # Projected coordinate system for accurate distance/area sizing (Web Mercator)
+
+ranking:
+  weights:
+    damage_severity: 0.40
+    population_density: 0.25
+    hospital_proximity: 0.20
+    critical_infrastructure: 0.15
+  vulnerability_factors:
+    low_income_ratio: 0.3
+    elderly_ratio: 0.7
+
+agent:
+  default_provider: "gemini" # gemini or openai
+  gemini:
+    model_name: "gemini-1.5-flash"
+    temperature: 0.2
+  openai:
+    model_name: "gpt-4o-mini"
+    temperature: 0.2
+
+logging:
+  file_path: "logs/disaster_assessment.log"
+  rotation: "10 MB"
+
+xbd:
+  dataset_dir: "data/xBD"
+  target_size: [512, 512]
+  train_split: 0.8
+  val_split: 0.1
+  test_split: 0.1
+  batch_size: 4
+  num_workers: 0
+  augmentations:
+    horizontal_flip: true
+    vertical_flip: true
+    random_rotate: true
+

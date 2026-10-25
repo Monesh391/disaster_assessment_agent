@@ -1,0 +1,27 @@
+# Core Web Application & Geospatial Visualization
+streamlit>=1.35.0
+streamlit-folium>=0.18.0
+folium>=0.16.0
+geopandas>=0.14.0
+shapely>=2.0.0
+pandas>=2.0.0
+numpy>=1.24.0
+pillow>=10.0.0
+matplotlib>=3.7.0
+
+# Computer Vision & Deep Learning
+opencv-python-headless>=4.8.0
+torch>=2.0.0
+torchvision>=0.15.0
+ultralytics>=8.0.0
+transformers>=4.40.0
+scikit-learn>=1.2.0
+
+# Configuration, Utilities & PDF Triage Report Generation
+pyyaml>=6.0.0
+python-dotenv>=1.0.0
+reportlab>=4.0.0
+
+# Optional Cognitive Agent LLM Providers (Rule-based fallback available offline)
+google-generativeai>=0.3.0
+openai>=1.0.0

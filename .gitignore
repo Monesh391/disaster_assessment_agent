@@ -1,0 +1,89 @@
+# ==============================================================================
+# Git Ignore Configuration: AI Disaster Damage Assessment Agent
+# ==============================================================================
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment Variables, Credentials & Local Secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.token
+
+# Logs & Temporary Files
+logs/
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# OS & Editor Artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Large Datasets & Cached Tensors (Total > 12 GB - Excluded from Git)
+data/*.pt
+data/*.npy
+data/xBD/
+data/xbd_splits/
+data/mined_negatives_*.pt
+data/train_pool_*.pt
+data/val_representative_*.pt
+
+# Scratch & Intermediate Processing
+scratch/
+runs/
+crop_cache_*/
+
+# Large Binary Archives & Institutional Deliverables
+*.zip
+*.tar.gz
+*.7z
+*.docx
+*.pptx
+
+# Large Model Checkpoints (> 50 MB / > 100 MB Excluded)
+models/experiments/
+models/satellite_detector_runs/
+models/*.pth
+models/*.pt
+yolov8*.pt
+
+# EXCEPTION: Preserve Essential Production Model Checkpoints (< 50 MB)
+!models/satellite_yolo_detector.pt
+!models/damage_net_v2_step4_resnet18_ce.pth
+
+# Sample Test Imagery (Keep sample pairs for instant demonstration)
+!data/samples/
+
+# Local backups and experimental artifacts
+backups/
+final_production_backup/
+extracted_pdf_images/
+
+# Large training datasets - never upload to GitHub
+/data/yolo_pre_only/
+/data/yolo_xbd_full/
+/data/mined_negatives_train_meta.json
+/data/mined_negatives_val_meta.json
