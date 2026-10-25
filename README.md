@@ -1,3 +1,17 @@
+# AI Agent for Disaster Damage Assessment
+
+**Live Demo:** https://monesh391-disaster-assessment-agent-app-v4-a0yfb2.streamlit.app/
+
+An AI-powered application for assessing disaster damage using before-and-after satellite images and generating spatial grid-based recovery priority rankings.
+
+## Features
+- Before-and-after satellite image analysis
+- AI-based building damage assessment
+- Spatial grid-based recovery prioritization
+- Recovery plan PDF generation
+
+## Technologies
+Python, Streamlit, PyTorch, Computer Vision, Satellite Image Processing
 # AI Agent for Automatic Disaster Damage Assessment & Spatial Grid-Based Dynamic Recovery Priority Ranking
 
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
